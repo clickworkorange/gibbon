@@ -175,7 +175,7 @@ module Gibbon
     def validate_api_key
       api_key = self.api_key
       unless api_key && (api_key["-"] || self.api_endpoint)
-        raise Gibbon::GibbonError, "You must set an api_key prior to making a call"
+        raise Gibbon::GibbonError, "The API key is missing or invalid"
       end
     end
 
